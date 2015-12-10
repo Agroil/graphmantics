@@ -76,7 +76,7 @@
     // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
     // In your Developer Console project, add a JavaScript origin that corresponds to the domain
     // where you will be running the script.
-    var clientId = '';
+    var clientId = 'AIzaSyCcgxUMKQoPckoQHGC2kLiSANFKwFlgUrE';
 
     // Enter the API key from the Google Develoepr Console - to handle any unauthenticated
     // requests in the code.
@@ -90,8 +90,9 @@
 
     // Use a button to handle authentication the first time.
     function handleClientLoad() {
-      gapi.client.setApiKey(apiKey);
-      window.setTimeout(checkAuth, 0);
+      console.log(gapi.client.setApiKey(apiKey));
+      console.log(gapi.client);
+      //window.setTimeout(checkAuth, 0);
     }
 
     function checkAuth() {
