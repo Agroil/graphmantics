@@ -126,7 +126,7 @@
 
     // Load the API and make an API call.  Display the results on the screen.
     function makeApiCall() {
-      gapi.client.load('plus', 'v3', function() {
+      gapi.client.load('youtube', 'v3', function() {
         var request = gapi.client.plus.people.get({
           'userId': 'me'
         });
