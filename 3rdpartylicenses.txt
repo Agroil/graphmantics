@@ -700,6 +700,9 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 
+font-awesome
+(OFL-1.1 AND MIT)
+
 @mdi/font
 OFL-1.1
 Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/),
@@ -799,9 +802,6 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-
-font-awesome
-(OFL-1.1 AND MIT)
 
 neo4j-driver
 Apache-2.0
