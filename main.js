@@ -303,6 +303,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _keylines_keylines_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keylines/keylines.component */ "./src/app/keylines/keylines.component.ts");
 /* harmony import */ var _popoto_popoto_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./popoto/popoto.component */ "./src/app/popoto/popoto.component.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -313,10 +314,18 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: "**", redirectTo: "/keylines", pathMatch: "full" },
-    { path: "keylines", component: _keylines_keylines_component__WEBPACK_IMPORTED_MODULE_2__["KeylinesComponent"] },
-    { path: "popoto", component: _popoto_popoto_component__WEBPACK_IMPORTED_MODULE_3__["PopotoComponent"] }
+    {
+        path: "",
+        component: _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+        children: [
+            { path: '', redirectTo: 'graphmantics/keylines', pathMatch: 'full' },
+            { path: "graphmantics/keylines", component: _keylines_keylines_component__WEBPACK_IMPORTED_MODULE_2__["KeylinesComponent"] },
+            { path: "graphmantics/popoto", component: _popoto_popoto_component__WEBPACK_IMPORTED_MODULE_3__["PopotoComponent"] }
+        ]
+    },
+    { path: "**", redirectTo: "graphmantics/keylines", pathMatch: "full" }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -478,7 +487,7 @@ module.exports = "<nav>\n  <div class=\"nav-wrapper\">\n    <a\n      href=\"htt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".chart-container {\n  width: 800px;\n  height: 600px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAva2V5bGluZXMvRDpcXHByb2plY3RzXFxncm10eF91aV9rbFxcdWkvc3JjXFxhcHBcXGtleWxpbmVzXFxrZXlsaW5lcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQVk7RUFDWixjQUFhLEVBQ2QiLCJmaWxlIjoic3JjL2FwcC9rZXlsaW5lcy9rZXlsaW5lcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jaGFydC1jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDgwMHB4O1xyXG4gICAgaGVpZ2h0OiA2MDBweDtcclxuICB9Il19 */"
+module.exports = ".chart-container {\n  width: 800px;\n  height: 600px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zYWRjaGlrb3YuZC5zL1Byb2plY3RzL3VpL3NyYy9hcHAva2V5bGluZXMva2V5bGluZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxhQUFZO0VBQ1osY0FBYSxFQUNkIiwiZmlsZSI6InNyYy9hcHAva2V5bGluZXMva2V5bGluZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2hhcnQtY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiA4MDBweDtcclxuICAgIGhlaWdodDogNjAwcHg7XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -646,7 +655,7 @@ var KeylinesComponent = /** @class */ (function () {
     };
     KeylinesComponent.prototype.getData = function (query) {
         var _this = this;
-        if (query === void 0) { query = "MATCH p=()-[r:`BO-RELATED_TO-BO`]->() RETURN p LIMIT 25"; }
+        if (query === void 0) { query = "MATCH p=()-->() RETURN p LIMIT 25"; }
         var neo4j = this.Neo4j();
         var params = {};
         if (this.query !== "" && this.query !== undefined) {
@@ -693,7 +702,7 @@ module.exports = "<div class=\"ppt-body\">\n  <nav class=\"top-nav grey lighten-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* Remove outline on collapsible headers */\n.collapsible-header:focus {\n  outline: 0; }\n#popoto-graph {\n  height: 600px; }\n#popoto-graph:-webkit-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-moz-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-ms-fullscreen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:fullscreen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-webkit-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-moz-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-ms-fullscreen {\n  width: 100%;\n  height: 100%; }\nnav.top-nav {\n  height: auto;\n  box-shadow: none; }\nnav.top-nav a.page-title {\n  font-size: 48px; }\nbody {\n  background-color: #fcfcfc; }\n.ppt-div-cypher {\n  background-color: #22252a;\n  border-radius: 5px 5px;\n  padding: 18px; }\n.ppt-div-results {\n  background-color: #22252a;\n  padding: 5px;\n  border-radius: 5px 5px; }\n.ppt-result {\n  color: #fff; }\nfooter.page-footer {\n  padding-bottom: 20px; }\n.text-box {\n  fill: #68bdf6;\n  stroke: #5ca8db;\n  stroke-width: 2px;\n  opacity: 0.7; }\n.text-box.value {\n  fill: #f0b017;\n  stroke: #db9a17; }\n.text-box.choose {\n  fill: #6dce9e;\n  stroke: #60b58b; }\n.text-box.selected-value {\n  fill: #f0b017;\n  stroke: #db9a17; }\n.text-box.disabled {\n  fill: #d3d3d3;\n  stroke: #c7c7c7;\n  stroke-width: 2px;\n  opacity: 0.7; }\n.ppt-body {\n  margin: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcG9wb3RvL0Q6XFxwcm9qZWN0c1xcZ3JtdHhfdWlfa2xcXHVpL3NyY1xcYXBwXFxwb3BvdG9cXHBvcG90by5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSwyQ0FBMkM7QUFDM0M7RUFDSSxXQUFVLEVBQ1g7QUFDRDtFQUNFLGNBQWEsRUFDZDtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsYUFBWTtFQUNaLGlCQUFnQixFQUNqQjtBQUNEO0VBQ0UsZ0JBQWUsRUFDaEI7QUFDRDtFQUNFLDBCQUF5QixFQUMxQjtBQUNEO0VBQ0UsMEJBQXlCO0VBQ3pCLHVCQUFzQjtFQUN0QixjQUFhLEVBQ2Q7QUFDRDtFQUNFLDBCQUF5QjtFQUN6QixhQUFZO0VBQ1osdUJBQXNCLEVBQ3ZCO0FBQ0Q7RUFDRSxZQUFXLEVBQ1o7QUFDRDtFQUNFLHFCQUFvQixFQUNyQjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlO0VBQ2Ysa0JBQWlCO0VBQ2pCLGFBQVksRUFDYjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlLEVBQ2hCO0FBQ0Q7RUFDRSxjQUFhO0VBQ2IsZ0JBQWUsRUFDaEI7QUFDRDtFQUNFLGNBQWE7RUFDYixnQkFBZSxFQUNoQjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlO0VBQ2Ysa0JBQWlCO0VBQ2pCLGFBQVksRUFDYjtBQUNEO0VBQ0UsVUFBUyxFQUNWIiwiZmlsZSI6InNyYy9hcHAvcG9wb3RvL3BvcG90by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFJlbW92ZSBvdXRsaW5lIG9uIGNvbGxhcHNpYmxlIGhlYWRlcnMgKi9cclxuLmNvbGxhcHNpYmxlLWhlYWRlcjpmb2N1cyB7XHJcbiAgICBvdXRsaW5lOiAwO1xyXG4gIH1cclxuICAjcG9wb3RvLWdyYXBoIHtcclxuICAgIGhlaWdodDogNjAwcHg7XHJcbiAgfVxyXG4gICNwb3BvdG8tZ3JhcGg6ZnVsbHNjcmVlbiB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcbiAgI3BvcG90by1ncmFwaDotd2Via2l0LWZ1bGwtc2NyZWVuIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuICAjcG9wb3RvLWdyYXBoOi1tb3otZnVsbC1zY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgfVxyXG4gICNwb3BvdG8tZ3JhcGg6LW1zLWZ1bGxzY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgfVxyXG4gIG5hdi50b3AtbmF2IHtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbiAgfVxyXG4gIG5hdi50b3AtbmF2IGEucGFnZS10aXRsZSB7XHJcbiAgICBmb250LXNpemU6IDQ4cHg7XHJcbiAgfVxyXG4gIGJvZHkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZjZmNmYztcclxuICB9XHJcbiAgLnBwdC1kaXYtY3lwaGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMjI1MmE7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHggNXB4O1xyXG4gICAgcGFkZGluZzogMThweDtcclxuICB9XHJcbiAgLnBwdC1kaXYtcmVzdWx0cyB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyNTJhO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4IDVweDtcclxuICB9XHJcbiAgLnBwdC1yZXN1bHQge1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgfVxyXG4gIGZvb3Rlci5wYWdlLWZvb3RlciB7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMjBweDtcclxuICB9XHJcbiAgLnRleHQtYm94IHtcclxuICAgIGZpbGw6ICM2OGJkZjY7XHJcbiAgICBzdHJva2U6ICM1Y2E4ZGI7XHJcbiAgICBzdHJva2Utd2lkdGg6IDJweDtcclxuICAgIG9wYWNpdHk6IDAuNztcclxuICB9XHJcbiAgLnRleHQtYm94LnZhbHVlIHtcclxuICAgIGZpbGw6ICNmMGIwMTc7XHJcbiAgICBzdHJva2U6ICNkYjlhMTc7XHJcbiAgfVxyXG4gIC50ZXh0LWJveC5jaG9vc2Uge1xyXG4gICAgZmlsbDogIzZkY2U5ZTtcclxuICAgIHN0cm9rZTogIzYwYjU4YjtcclxuICB9XHJcbiAgLnRleHQtYm94LnNlbGVjdGVkLXZhbHVlIHtcclxuICAgIGZpbGw6ICNmMGIwMTc7XHJcbiAgICBzdHJva2U6ICNkYjlhMTc7XHJcbiAgfVxyXG4gIC50ZXh0LWJveC5kaXNhYmxlZCB7XHJcbiAgICBmaWxsOiAjZDNkM2QzO1xyXG4gICAgc3Ryb2tlOiAjYzdjN2M3O1xyXG4gICAgc3Ryb2tlLXdpZHRoOiAycHg7XHJcbiAgICBvcGFjaXR5OiAwLjc7XHJcbiAgfVxyXG4gIC5wcHQtYm9keSB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfSJdfQ== */"
+module.exports = "/* Remove outline on collapsible headers */\n.collapsible-header:focus {\n  outline: 0; }\n#popoto-graph {\n  height: 600px; }\n#popoto-graph:-webkit-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-moz-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-ms-fullscreen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:fullscreen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-webkit-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-moz-full-screen {\n  width: 100%;\n  height: 100%; }\n#popoto-graph:-ms-fullscreen {\n  width: 100%;\n  height: 100%; }\nnav.top-nav {\n  height: auto;\n  box-shadow: none; }\nnav.top-nav a.page-title {\n  font-size: 48px; }\nbody {\n  background-color: #fcfcfc; }\n.ppt-div-cypher {\n  background-color: #22252a;\n  border-radius: 5px 5px;\n  padding: 18px; }\n.ppt-div-results {\n  background-color: #22252a;\n  padding: 5px;\n  border-radius: 5px 5px; }\n.ppt-result {\n  color: #fff; }\nfooter.page-footer {\n  padding-bottom: 20px; }\n.text-box {\n  fill: #68bdf6;\n  stroke: #5ca8db;\n  stroke-width: 2px;\n  opacity: 0.7; }\n.text-box.value {\n  fill: #f0b017;\n  stroke: #db9a17; }\n.text-box.choose {\n  fill: #6dce9e;\n  stroke: #60b58b; }\n.text-box.selected-value {\n  fill: #f0b017;\n  stroke: #db9a17; }\n.text-box.disabled {\n  fill: #d3d3d3;\n  stroke: #c7c7c7;\n  stroke-width: 2px;\n  opacity: 0.7; }\n.ppt-body {\n  margin: 0; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zYWRjaGlrb3YuZC5zL1Byb2plY3RzL3VpL3NyYy9hcHAvcG9wb3RvL3BvcG90by5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSwyQ0FBMkM7QUFDM0M7RUFDSSxXQUFVLEVBQ1g7QUFDRDtFQUNFLGNBQWEsRUFDZDtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUhEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsWUFBVztFQUNYLGFBQVksRUFDYjtBQUNEO0VBQ0UsYUFBWTtFQUNaLGlCQUFnQixFQUNqQjtBQUNEO0VBQ0UsZ0JBQWUsRUFDaEI7QUFDRDtFQUNFLDBCQUF5QixFQUMxQjtBQUNEO0VBQ0UsMEJBQXlCO0VBQ3pCLHVCQUFzQjtFQUN0QixjQUFhLEVBQ2Q7QUFDRDtFQUNFLDBCQUF5QjtFQUN6QixhQUFZO0VBQ1osdUJBQXNCLEVBQ3ZCO0FBQ0Q7RUFDRSxZQUFXLEVBQ1o7QUFDRDtFQUNFLHFCQUFvQixFQUNyQjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlO0VBQ2Ysa0JBQWlCO0VBQ2pCLGFBQVksRUFDYjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlLEVBQ2hCO0FBQ0Q7RUFDRSxjQUFhO0VBQ2IsZ0JBQWUsRUFDaEI7QUFDRDtFQUNFLGNBQWE7RUFDYixnQkFBZSxFQUNoQjtBQUNEO0VBQ0UsY0FBYTtFQUNiLGdCQUFlO0VBQ2Ysa0JBQWlCO0VBQ2pCLGFBQVksRUFDYjtBQUNEO0VBQ0UsVUFBUyxFQUNWIiwiZmlsZSI6InNyYy9hcHAvcG9wb3RvL3BvcG90by5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFJlbW92ZSBvdXRsaW5lIG9uIGNvbGxhcHNpYmxlIGhlYWRlcnMgKi9cclxuLmNvbGxhcHNpYmxlLWhlYWRlcjpmb2N1cyB7XHJcbiAgICBvdXRsaW5lOiAwO1xyXG4gIH1cclxuICAjcG9wb3RvLWdyYXBoIHtcclxuICAgIGhlaWdodDogNjAwcHg7XHJcbiAgfVxyXG4gICNwb3BvdG8tZ3JhcGg6ZnVsbHNjcmVlbiB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcbiAgI3BvcG90by1ncmFwaDotd2Via2l0LWZ1bGwtc2NyZWVuIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuICAjcG9wb3RvLWdyYXBoOi1tb3otZnVsbC1zY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgfVxyXG4gICNwb3BvdG8tZ3JhcGg6LW1zLWZ1bGxzY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgfVxyXG4gIG5hdi50b3AtbmF2IHtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbiAgfVxyXG4gIG5hdi50b3AtbmF2IGEucGFnZS10aXRsZSB7XHJcbiAgICBmb250LXNpemU6IDQ4cHg7XHJcbiAgfVxyXG4gIGJvZHkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZjZmNmYztcclxuICB9XHJcbiAgLnBwdC1kaXYtY3lwaGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMjI1MmE7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHggNXB4O1xyXG4gICAgcGFkZGluZzogMThweDtcclxuICB9XHJcbiAgLnBwdC1kaXYtcmVzdWx0cyB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyNTJhO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4IDVweDtcclxuICB9XHJcbiAgLnBwdC1yZXN1bHQge1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgfVxyXG4gIGZvb3Rlci5wYWdlLWZvb3RlciB7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMjBweDtcclxuICB9XHJcbiAgLnRleHQtYm94IHtcclxuICAgIGZpbGw6ICM2OGJkZjY7XHJcbiAgICBzdHJva2U6ICM1Y2E4ZGI7XHJcbiAgICBzdHJva2Utd2lkdGg6IDJweDtcclxuICAgIG9wYWNpdHk6IDAuNztcclxuICB9XHJcbiAgLnRleHQtYm94LnZhbHVlIHtcclxuICAgIGZpbGw6ICNmMGIwMTc7XHJcbiAgICBzdHJva2U6ICNkYjlhMTc7XHJcbiAgfVxyXG4gIC50ZXh0LWJveC5jaG9vc2Uge1xyXG4gICAgZmlsbDogIzZkY2U5ZTtcclxuICAgIHN0cm9rZTogIzYwYjU4YjtcclxuICB9XHJcbiAgLnRleHQtYm94LnNlbGVjdGVkLXZhbHVlIHtcclxuICAgIGZpbGw6ICNmMGIwMTc7XHJcbiAgICBzdHJva2U6ICNkYjlhMTc7XHJcbiAgfVxyXG4gIC50ZXh0LWJveC5kaXNhYmxlZCB7XHJcbiAgICBmaWxsOiAjZDNkM2QzO1xyXG4gICAgc3Ryb2tlOiAjYzdjN2M3O1xyXG4gICAgc3Ryb2tlLXdpZHRoOiAycHg7XHJcbiAgICBvcGFjaXR5OiAwLjc7XHJcbiAgfVxyXG4gIC5wcHQtYm9keSB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgfSJdfQ== */"
 
 /***/ }),
 
@@ -753,8 +762,8 @@ var PopotoComponent = /** @class */ (function () {
         popoto.graph.link.SHOW_MARKER = true;
         popoto.query.COLLECT_RELATIONS_WITH_VALUES = true;
         // Demo Neo4j database settings hosted on GrapheneDb
-        popoto.rest.CYPHER_URL = "http://34.224.5.60:33321/db/data/transaction/commit";
-        popoto.rest.AUTHORIZATION = "Basic bmVvNGo6cmFpbHdheXMtYnJ1c2gtanVyaXNkaWN0aW9ucw==";
+        popoto.rest.CYPHER_URL = "http://hobby-ahlnlgedbnlpgbkehabafocl.dbs.graphenedb.com:24780/db/data/transaction/commit";
+        popoto.rest.AUTHORIZATION = "Basic YXBwMTI3OTgwNDk3LUxoRFA1bjpiLmpPQ3N6NXNaTXNGdy54SndzaGg2dWtpNHViYUxw";
         // Use known min and max amount but should be extracted from data in a real application
         var maxAmount = 141396;
         var minAmount = 3044;
@@ -1235,11 +1244,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-var url = "http://34.224.5.60:33321/db/data/transaction/commit";
+var url = "http://hobby-ahlnlgedbnlpgbkehabafocl.dbs.graphenedb.com:24780/db/data/transaction/commit";
 var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
         "Content-Type": "application/json",
-        Authorization: "Basic bmVvNGo6cmFpbHdheXMtYnJ1c2gtanVyaXNkaWN0aW9ucw==",
+        Authorization: "Basic YXBwMTI3OTgwNDk3LUxoRFA1bjpiLmpPQ3N6NXNaTXNGdy54SndzaGg2dWtpNHViYUxw",
         dataType: "json"
     })
 };
@@ -1324,7 +1333,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\projects\grmtx_ui_kl\ui\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sadchikov.d.s/Projects/ui/src/main.ts */"./src/main.ts");
 
 
 /***/ })
