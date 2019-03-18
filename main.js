@@ -320,9 +320,9 @@ var routes = [
         path: "",
         component: _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
         children: [
-            { path: '', redirectTo: '/keylines', pathMatch: 'full' },
-            { path: "/keylines", component: _keylines_keylines_component__WEBPACK_IMPORTED_MODULE_2__["KeylinesComponent"] },
-            { path: "/popoto", component: _popoto_popoto_component__WEBPACK_IMPORTED_MODULE_3__["PopotoComponent"] }
+            { path: '', redirectTo: 'keylines', pathMatch: 'full' },
+            { path: "keylines", component: _keylines_keylines_component__WEBPACK_IMPORTED_MODULE_2__["KeylinesComponent"] },
+            { path: "popoto", component: _popoto_popoto_component__WEBPACK_IMPORTED_MODULE_3__["PopotoComponent"] }
         ]
     },
     { path: "**", redirectTo: "keylines", pathMatch: "full" }
