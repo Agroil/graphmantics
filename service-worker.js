@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bicovery-deploy/precache-manifest.9f27c8b437a8d0fed99ba53961894078.js"
+  "/bicovery-deploy/precache-manifest.5e995eac25805d6f8356fd13c59177c6.js"
 );
 
 self.addEventListener('message', (event) => {

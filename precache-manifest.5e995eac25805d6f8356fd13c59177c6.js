@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce85b09fdedd9c2e08f37189dcbb188d",
+    "revision": "5729ed283c61fdc1b7e4660b7d52077a",
     "url": "/bicovery-deploy/index.html"
   },
   {
