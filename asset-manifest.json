@@ -9,8 +9,8 @@
     "App.js": "/bicovery-deploy/static/js/App.6f084a77.chunk.js",
     "App.js.map": "/bicovery-deploy/static/js/App.6f084a77.chunk.js.map",
     "main.css": "/bicovery-deploy/static/css/main.5038c451.chunk.css",
-    "main.js": "/bicovery-deploy/static/js/main.58bbd69d.chunk.js",
-    "main.js.map": "/bicovery-deploy/static/js/main.58bbd69d.chunk.js.map",
+    "main.js": "/bicovery-deploy/static/js/main.97b53022.chunk.js",
+    "main.js.map": "/bicovery-deploy/static/js/main.97b53022.chunk.js.map",
     "runtime-main.js": "/bicovery-deploy/static/js/runtime-main.606e7432.js",
     "runtime-main.js.map": "/bicovery-deploy/static/js/runtime-main.606e7432.js.map",
     "second.js": "/bicovery-deploy/static/js/second.1b5635f0.chunk.js",
@@ -82,7 +82,7 @@
     "static/js/33.ea101687.chunk.js": "/bicovery-deploy/static/js/33.ea101687.chunk.js",
     "static/js/33.ea101687.chunk.js.map": "/bicovery-deploy/static/js/33.ea101687.chunk.js.map",
     "index.html": "/bicovery-deploy/index.html",
-    "precache-manifest.47a30c478cb86cf1ac9a5d6c5aa50f61.js": "/bicovery-deploy/precache-manifest.47a30c478cb86cf1ac9a5d6c5aa50f61.js",
+    "precache-manifest.d0c5805479decf91e6737b6a62e1897b.js": "/bicovery-deploy/precache-manifest.d0c5805479decf91e6737b6a62e1897b.js",
     "service-worker.js": "/bicovery-deploy/service-worker.js",
     "static/css/21.3add15a4.chunk.css.map": "/bicovery-deploy/static/css/21.3add15a4.chunk.css.map",
     "static/css/22.b90ce945.chunk.css.map": "/bicovery-deploy/static/css/22.b90ce945.chunk.css.map",
@@ -108,6 +108,6 @@
     "static/css/21.3add15a4.chunk.css",
     "static/js/21.b4e7385d.chunk.js",
     "static/css/main.5038c451.chunk.css",
-    "static/js/main.58bbd69d.chunk.js"
+    "static/js/main.97b53022.chunk.js"
   ]
 }
