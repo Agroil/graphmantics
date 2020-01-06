@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9f80eda8ad198579f969eb68baddb45",
+    "revision": "1d002a0e6c282b69a2d6edd1559247d3",
     "url": "/bicovery-deploy/index.html"
   },
   {
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bicovery-deploy/static/css/33.71fb32fb.chunk.css"
   },
   {
-    "revision": "22a10112380af9c53721",
+    "revision": "f7cee804f4ed4ad41fc7",
     "url": "/bicovery-deploy/static/css/main.5038c451.chunk.css"
   },
   {
@@ -148,8 +148,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bicovery-deploy/static/js/App.6f084a77.chunk.js"
   },
   {
-    "revision": "22a10112380af9c53721",
-    "url": "/bicovery-deploy/static/js/main.2aa54775.chunk.js"
+    "revision": "f7cee804f4ed4ad41fc7",
+    "url": "/bicovery-deploy/static/js/main.58bbd69d.chunk.js"
   },
   {
     "revision": "3ce58e254647c17df171",
