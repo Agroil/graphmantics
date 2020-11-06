@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: *.js
+
+Host: https://geekpowr.com
+Sitemap: https://geekpowr.com/sitemap.xml
