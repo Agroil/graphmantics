@@ -28,29 +28,33 @@
     <meta name="theme-color" content="#1976d2"/>
   <link rel="stylesheet" href="styles.7987301a2b5f2a501f9e.css"></head>
   <body>
-    <app-root>
+    <div id="splash-screen">
       <style>
         @import url("https://fonts.googleapis.com/css?family=Roboto:700");
-        *,
-        *:after,
-        *:before {
+        #splash-screen *,
+        #splash-screen *:after,
+        #splash-screen *:before {
           margin: 0;
           padding: 0;
           box-sizing: inherit;
         }
 
-        app-root {
+        #splash-screen {
           margin: 0;
           padding: 0;
           height: 100vh;
+          width: 100vw;
           display: flex;
           justify-content: center;
           box-sizing: border-box;
           align-items: center;
           flex-direction: column;
           background-color: #1a1a1a;
+          position: fixed;
+          z-index: 999;
         }
-        app-root::after {
+
+        #splash-screen:after {
           content: "";
           background: url(assets/images/loading/logo.png);
           background-repeat: no-repeat;
@@ -62,14 +66,14 @@
           bottom: 0;
           right: 0;
           position: absolute;
-          z-index: 1;
+          z-index: 999;
         }
 
-        ul {
+        #splash-screen ul {
           display: flex;
         }
 
-        li {
+        #splash-screen li {
           list-style: none;
           color: #484848;
           font-family: roboto, Arial, Sans-serif;
@@ -93,28 +97,28 @@
           }
         }
 
-        li:nth-child(1) {
+        #splash-screen li:nth-child(1) {
           animation-delay: 0.2s;
         }
-        li:nth-child(2) {
+        #splash-screen li:nth-child(2) {
           animation-delay: 0.4s;
         }
-        li:nth-child(3) {
+        #splash-screen li:nth-child(3) {
           animation-delay: 0.6s;
         }
-        li:nth-child(4) {
+        #splash-screen li:nth-child(4) {
           animation-delay: 0.8s;
         }
-        li:nth-child(5) {
+        #splash-screen li:nth-child(5) {
           animation-delay: 1s;
         }
-        li:nth-child(6) {
+        #splash-screen li:nth-child(6) {
           animation-delay: 1.2s;
         }
-        li:nth-child(7) {
+        #splash-screen li:nth-child(7) {
           animation-delay: 1.4s;
         }
-        p.loading-text {
+        #splash-screen p.loading-text {
           font-family: gilroy;
           font-style: normal;
           font-weight: bold;
@@ -124,15 +128,15 @@
           letter-spacing: 1px;
           color: #8c8c8c;
         }
-        p.loading-text > span {
+        #splash-screen p.loading-text > span {
           font-family: gilroy-bold;
           color: #ffffff;
         }
         @media (max-width: 575.98px) {
-          li {
+          #splash-screen li {
             font-size: 18px;
           }
-          p.loading-text {
+          #splash-screen p.loading-text {
             font-size: 18px;
           }
         }
@@ -151,7 +155,10 @@
         <li>N</li>
         <li>G</li>
       </ul>
-    </app-root>
-    <noscript>Please enable JavaScript to continue using this application.</noscript>
-  <script src="runtime-es2015.f1273282fbfa06cbbec1.js" type="module"></script><script src="runtime-es5.f1273282fbfa06cbbec1.js" nomodule defer></script><script src="polyfills-es5.b626d7d335d5563bcabd.js" nomodule defer></script><script src="polyfills-es2015.1d71f09c0c7bde2a59d2.js" type="module"></script><script src="scripts.3bcc6d60828fe4ce6e41.js" defer></script><script src="main-es2015.e4e4feb8c52c1925bc40.js" type="module"></script><script src="main-es5.e4e4feb8c52c1925bc40.js" nomodule defer></script></body>
+    </div>
+    <app-root></app-root>
+    <noscript>
+      Please enable JavaScript to continue using this application.
+    </noscript>
+  <script src="runtime-es2015.f1273282fbfa06cbbec1.js" type="module"></script><script src="runtime-es5.f1273282fbfa06cbbec1.js" nomodule defer></script><script src="polyfills-es5.b626d7d335d5563bcabd.js" nomodule defer></script><script src="polyfills-es2015.1d71f09c0c7bde2a59d2.js" type="module"></script><script src="scripts.3bcc6d60828fe4ce6e41.js" defer></script><script src="main-es2015.a6cb93b83ebadb2fecfc.js" type="module"></script><script src="main-es5.a6cb93b83ebadb2fecfc.js" nomodule defer></script></body>
 </html>
