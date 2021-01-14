@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1610657666213,
+  "timestamp": 1610659388929,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -41,7 +41,11 @@
         "/scripts.3bcc6d60828fe4ce6e41.js",
         "/styles.9c7b9a1e38a742b2f317.css"
       ],
-      "patterns": []
+      "patterns": [
+        "https:\\/\\/www\\.youtube\\.com\\/embed\\/.*",
+        "https:\\/\\/player\\.vimeo\\.com\\/video\\/.*",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
     },
     {
       "name": "assets",
