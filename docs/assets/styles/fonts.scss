@@ -9,7 +9,7 @@
     url("../fonts/gilroy-light-webfont.svg#gilroylight") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 
 @font-face {
@@ -23,5 +23,5 @@
     url("../fonts/gilroy-extrabold-webfont.svg#gilroyextrabold") format("svg");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
 }
