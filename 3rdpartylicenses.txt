@@ -476,6 +476,9 @@ Apache-2.0
  
 
 
+supports-webp
+MIT
+
 tslib
 0BSD
 Copyright (c) Microsoft Corporation.
