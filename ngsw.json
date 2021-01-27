@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611705255049,
+  "timestamp": 1611705684060,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -39,7 +39,7 @@
         "/runtime-es2015.f75e5332b3331ddb35fd.js",
         "/runtime-es5.f75e5332b3331ddb35fd.js",
         "/scripts.2b3fb2d8880bd7670ba7.js",
-        "/styles.825101c6ad502c44d309.css"
+        "/styles.b75cc590cb0085c6ba8d.css"
       ],
       "patterns": [
         "https:\\/\\/www\\.youtube\\.com\\/embed\\/.*",
@@ -3374,7 +3374,7 @@
     "/assets/images/categories/video/2_traced.svg": "b7a046e3c3a1226bbe94d951a3f65cdb0198ce46",
     "/assets/images/categories/video/2_xl.png": "e81098269fb6ab46714ef2ac1e7260ee7c1cfba7",
     "/assets/images/categories/video/2_xl.webp": "1c1df4398a6e244fe8b518c13ea7c962fa694a3e",
-    "/assets/images/manifest.json": "54b2a3b80bbf4ae51ed33499c7a7d60c84028b8c",
+    "/assets/images/manifest.json": "e1113970d20cde793b0822b79dd46768ea558a65",
     "/assets/images/posts/animation/1/1_md.png": "0f528e58ee2d775059748720dd0f547e97006f44",
     "/assets/images/posts/animation/1/1_md.webp": "19033c720ee7e4fdc40c0a76fd78d88ace4ee39c",
     "/assets/images/posts/animation/1/1_sm.png": "e3cb6dd6b4a2926171d51a2cade142379e41d26c",
@@ -4978,7 +4978,7 @@
     "/header-bg_sm.66b39a44a0b5d996cde0.png": "7b1f39d5388fbb6bf36095826da781e7eba5ada0",
     "/header-bg_xl.45b7c45efe2bd5d14cd0.png": "f46560b54d83ac4f18ca37730e8883d67fdca9f1",
     "/header-bg_xl.b6643c737546017e2b90.webp": "3ea6661a4c33bce64dc3d92985c77cd2373ecbdf",
-    "/index.html": "97dcb15e30ff0e9da4e4f43b719ffa239cac58c9",
+    "/index.html": "5725154e9b12a30cd42132a715cbad856d57bf6b",
     "/instagram.0fd4567d4b0270f70195.svg": "195c390b7abb1c4762e5950fcea8228f8cd3add2",
     "/main-es2015.56f106bd9f5ef5874c99.js": "7f1bf2f3f1f3ff192528d98647eaa869651443b8",
     "/main-es5.56f106bd9f5ef5874c99.js": "23893c81cd4cb2258a0d4735b8a497f13afbb4e4",
@@ -5006,7 +5006,7 @@
     "/runtime-es2015.f75e5332b3331ddb35fd.js": "c559f9e7fca153cd5da70c864b02317c992aa0c7",
     "/runtime-es5.f75e5332b3331ddb35fd.js": "f3b35a5c31d04f841d74317d3b370bf70a6974e8",
     "/scripts.2b3fb2d8880bd7670ba7.js": "ddd8bd0272f6b26eec4bb0aedbf06529df6ce18f",
-    "/styles.825101c6ad502c44d309.css": "7c3bc44f4f4c8577235a999f53e88f7284f64178",
+    "/styles.b75cc590cb0085c6ba8d.css": "64e461bf83259471b992eeb10786254db31bc9af",
     "/vimeo.bf508eb9531d92f27553.svg": "28297235d82557f27e4e7480038ea1ade49d523a",
     "/white-line_xl.45eb5c80c97a45cacd30.png": "bfef6a3ae9d98ccdd28d7e75f8f0b37e5f2c9cbc",
     "/youtube.701499b2592eae6aea0d.svg": "a44c18df7fee68fa8285474aa30a82fa40456704"
