@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1612139024606,
+  "timestamp": 1614288345408,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -2712,7 +2712,7 @@
     "/assets/images/categories/video/2_traced.svg": "b7a046e3c3a1226bbe94d951a3f65cdb0198ce46",
     "/assets/images/categories/video/2_xl.png": "e81098269fb6ab46714ef2ac1e7260ee7c1cfba7",
     "/assets/images/categories/video/2_xl.webp": "1c1df4398a6e244fe8b518c13ea7c962fa694a3e",
-    "/assets/images/manifest.json": "ca38c3da3f224387ed94bd5452e23b60d0e0c753",
+    "/assets/images/manifest.json": "2458a1c21b495804f9f05211ed2c24f969a84afb",
     "/assets/images/posts/animation/1/1_md.png": "0f528e58ee2d775059748720dd0f547e97006f44",
     "/assets/images/posts/animation/1/1_md.webp": "19033c720ee7e4fdc40c0a76fd78d88ace4ee39c",
     "/assets/images/posts/animation/1/1_sm.png": "e3cb6dd6b4a2926171d51a2cade142379e41d26c",
@@ -4265,7 +4265,7 @@
     "/header-bg_sm.66b39a44a0b5d996cde0.png": "7b1f39d5388fbb6bf36095826da781e7eba5ada0",
     "/header-bg_xl.45b7c45efe2bd5d14cd0.png": "f46560b54d83ac4f18ca37730e8883d67fdca9f1",
     "/header-bg_xl.b6643c737546017e2b90.webp": "3ea6661a4c33bce64dc3d92985c77cd2373ecbdf",
-    "/index.html": "2e62ede833d9d4d61a99bd738290a06e33707a5e",
+    "/index.html": "0a519205330710ec32f7196f3714ea148a5e9e03",
     "/instagram.0fd4567d4b0270f70195.svg": "195c390b7abb1c4762e5950fcea8228f8cd3add2",
     "/main-es2015.b580f05e3e4f93f6be3f.js": "e4778bdc00161b6c831215926c37fc904e76ca05",
     "/main-es5.b580f05e3e4f93f6be3f.js": "96f0a2a9ffcf4cf447f36b9de239097ec00a6df9",
