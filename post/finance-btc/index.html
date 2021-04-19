@@ -27,6 +27,33 @@
     <meta name="theme-color" content="#1976d2">
     <link as="style" rel="stylesheet preload prefetch" href="assets/styles/fonts.css" crossorigin="anonymous" type="text/css">
     <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "237601241440956");
+      fbq("track", "PageView");
+    </script>
     <noscript><img
         height="1"
         width="1"
@@ -174,7 +201,7 @@ The following set of features will be enough for MVP development and coming up w
     <noscript>
       Please enable JavaScript to continue using this application.
     </noscript>
-  <script src="runtime-es2015.4e0c58e15121a132e27f.js" type="module"></script><script src="runtime-es5.4e0c58e15121a132e27f.js" nomodule="" defer=""></script><script src="polyfills-es5.2cd700e1be21a77d21ba.js" nomodule="" defer=""></script><script src="polyfills-es2015.403705b2a6be91429646.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer=""></script><script src="main-es2015.a8e131a0f974c63c7e97.js" type="module"></script><script src="main-es5.a8e131a0f974c63c7e97.js" nomodule="" defer=""></script>
+  <script src="runtime-es2015.4e0c58e15121a132e27f.js" type="module"></script><script src="runtime-es5.4e0c58e15121a132e27f.js" nomodule="" defer=""></script><script src="polyfills-es5.2cd700e1be21a77d21ba.js" nomodule="" defer=""></script><script src="polyfills-es2015.403705b2a6be91429646.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer=""></script><script src="main-es2015.1c6b9bb8966b9a896ad4.js" type="module"></script><script src="main-es5.1c6b9bb8966b9a896ad4.js" nomodule="" defer=""></script>
 
 
 </body><!-- This page was prerendered with Angular Universal --></html>
