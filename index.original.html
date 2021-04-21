@@ -165,6 +165,7 @@
     <app-root></app-root>
     <!-- Facebook Pixel Code -->
     <script>
+      const timeoutRange = 2000;
       let timeoutID;
       const _wr = function (type) {
         const orig = history[type];
@@ -195,7 +196,7 @@
               setTimeout(() => {
                 console.log("track", "PageView ", e);
                 f.fbq("track", "PageView");
-              }, 0);
+              }, timeoutRange);
             });
 
             if (f.fbq) return;
@@ -223,7 +224,7 @@
 
           window.fbq("init", "237601241440956");
           window.fbq("track", "PageView");
-        }, 2000);
+        }, timeoutRange);
       });
     </script>
     <noscript>

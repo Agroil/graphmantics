@@ -232,6 +232,7 @@
               </ngx-dynamic-hooks></p></div></div></section><!----><!----><!----><!----></section><!----></article></app-article><!----></main><app-footer _ngcontent-sc23="" class="ng-tns-c23-0" _nghost-sc22=""><footer _ngcontent-sc22=""><div _ngcontent-sc22="" class="footer-contact"><video _ngcontent-sc22="" autoplay="" loop="" muted="" playsinline=""><source _ngcontent-sc22="" src="assets/footer/Footer-Animation-V5.mp4" type="video/mp4"><source _ngcontent-sc22="" src="assets/footer/Footer-Animation-V5.webm" type="video/webm"></video><div _ngcontent-sc22="" class="container"><div _ngcontent-sc22="" itemscope="" itemtype="https://schema.org/Organization" class="row"><div _ngcontent-sc22="" itemprop="name" class="footer-contact-text col-sm-12 col-md-4"> GeekPowr </div><div _ngcontent-sc22="" class="footer-contact-info col-sm-12 col-md-4"><h4 _ngcontent-sc22="">Contacts</h4><ul _ngcontent-sc22=""><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="mailto:company@geek-powr.com" rel="noreferrer noopener" itemprop="email"> company@geek-powr.com </a><br _ngcontent-sc22=""><a _ngcontent-sc22="" href="tel:+1 323 744 7202" rel="noreferrer noopener" itemprop="telephone"> +1 323 744 7202 </a></li><li _ngcontent-sc22="" itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress"><span _ngcontent-sc22="" itemprop="streetAddress">845S Los Angeles St,</span><br _ngcontent-sc22=""><span _ngcontent-sc22="" itemprop="addressLocality">Los Angeles, CA </span><span _ngcontent-sc22="" itemprop="postalCode">90014</span></li></ul></div><div _ngcontent-sc22="" class="footer-contact-social col-sm-12 col-md-4"><h4 _ngcontent-sc22="">Social media</h4><ul _ngcontent-sc22=""><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="https://www.youtube.com/channel/UC3dNIuOCLaizOJePXvdccFw/" target="_blank" rel="noreferrer noopener" class="footer-contact-social-youtube"></a></li><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="https://vimeo.com/geekpowr" target="_blank" rel="noreferrer noopener" class="footer-contact-social-vimeo"></a></li><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="https://www.facebook.com/GeekPowr" target="_blank" rel="noreferrer noopener" class="footer-contact-social-facebook"></a></li><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="https://dribbble.com/GPM_Media" target="_blank" rel="noreferrer noopener" class="footer-contact-social-dribble"></a></li><li _ngcontent-sc22=""><a _ngcontent-sc22="" href="https://www.behance.net/geekpowrmedia" target="_blank" rel="noreferrer noopener" class="footer-contact-social-behance"></a></li></ul></div></div></div></div><div _ngcontent-sc22="" class="footer-copyright"><p _ngcontent-sc22="" class="mb-0">Copyright GeekPowr 2021</p></div></footer></app-footer></app-root>
     <!-- Facebook Pixel Code -->
     <script>
+      const timeoutRange = 2000;
       let timeoutID;
       const _wr = function (type) {
         const orig = history[type];
@@ -262,7 +263,7 @@
               setTimeout(() => {
                 console.log("track", "PageView ", e);
                 f.fbq("track", "PageView");
-              }, 0);
+              }, timeoutRange);
             });
 
             if (f.fbq) return;
@@ -290,7 +291,7 @@
 
           window.fbq("init", "237601241440956");
           window.fbq("track", "PageView");
-        }, 2000);
+        }, timeoutRange);
       });
     </script>
     <noscript>
