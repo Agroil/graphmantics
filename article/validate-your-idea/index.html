@@ -293,8 +293,6 @@
             f.addEventListener("routeChanged", function (e) {
               setTimeout(() => {
                 console.log("track", "PageView ", e);
-
-                // f.fbq.disablePushState = true;
                 f.fbq("track", "PageView");
               }, 0);
             });
