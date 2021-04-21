@@ -163,82 +163,80 @@
       </ul>
     </div>
     <app-root></app-root>
-    <noscript>
-      Please enable JavaScript to continue using this application.
-    </noscript>
     <!-- Facebook Pixel Code -->
     <script>
       let timeoutID;
-      !(function (f, b, e, v, n, t, s) {
-        const _wr = function (type) {
-          const orig = history[type];
-          return function () {
-            const rv = orig.apply(this, arguments);
-            const e = new Event("routeChanged");
-            e.arguments = arguments;
-            window.dispatchEvent(e);
-            return rv;
-          };
+      const _wr = function (type) {
+        const orig = history[type];
+        return function () {
+          const rv = orig.apply(this, arguments);
+          const e = new Event("routeChanged");
+          e.arguments = arguments;
+          window.dispatchEvent(e);
+          return rv;
         };
+      };
 
-        f.history.pushState = _wr("pushState");
-        f.history.replaceState = _wr("replaceState");
-        f.history.back = _wr("forward");
-        f.history.forward = _wr("forward");
-        f.history.go = _wr("go");
+      window.addEventListener("load", () => {
+        if (timeoutID) {
+          clearTimeout(timeoutID);
+        }
 
-        // Use it like this:
-        f.addEventListener("routeChanged", function (e) {
-          if (timeoutID) {
-            clearTimeout(timeoutID);
-          }
+        timeoutID = setTimeout(() => {
+          !(function (f, b, e, v, n, t, s) {
+            f.history.pushState = _wr("pushState");
+            f.history.replaceState = _wr("replaceState");
+            f.history.back = _wr("forward");
+            f.history.forward = _wr("forward");
+            f.history.go = _wr("go");
 
-          timeoutID = setTimeout(() => {
-            console.log("track", "PageView ", e);
+            // Use it like this:
+            f.addEventListener("routeChanged", function (e) {
+              setTimeout(() => {
+                console.log("track", "PageView ", e);
 
-            f.fbq.disablePushState = true;
-            f.fbq("init", "237601241440956");
-            f.fbq("track", "PageView");
-          }, 500);
-        });
+                // f.fbq.disablePushState = true;
+                f.fbq("track", "PageView");
+              }, 0);
+            });
 
-        // f.addEventListener("popstate", (e) => {
-        //   debugger;
-        //   f.fbq("track", "PageView");
-        // });
+            if (f.fbq) return;
+            n = f.fbq = function () {
+              n.callMethod
+                ? n.callMethod.apply(n, arguments)
+                : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js"
+          );
 
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      // window.fbq("track", "PageView");
-
-      // Add this:
+          window.fbq("init", "237601241440956");
+          window.fbq("track", "PageView");
+        }, 2000);
+      });
     </script>
-    <noscript><img
+    <noscript>
+      Please enable JavaScript to continue using this application.
+      <img
         height="1"
         width="1"
         style="display: none"
         src="https://www.facebook.com/tr?id=237601241440956&ev=PageView&noscript=1"
-    /></noscript>
+      />
+    </noscript>
     <!-- End Facebook Pixel Code -->
-  <script src="runtime-es2015.2d0848c8137ed83a9b29.js" type="module"></script><script src="runtime-es5.2d0848c8137ed83a9b29.js" nomodule defer></script><script src="polyfills-es5.2cd700e1be21a77d21ba.js" nomodule defer></script><script src="polyfills-es2015.403705b2a6be91429646.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.da86992a615ed5cf8915.js" type="module"></script><script src="main-es5.da86992a615ed5cf8915.js" nomodule defer></script></body>
+  <script src="runtime-es2015.58cb3f09a5c49872f3f0.js" type="module"></script><script src="runtime-es5.58cb3f09a5c49872f3f0.js" nomodule defer></script><script src="polyfills-es5.4ca4d001325fc8053a51.js" nomodule defer></script><script src="polyfills-es2015.467f6169c8691f8ebbb2.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.a43288b87dd90259b6eb.js" type="module"></script><script src="main-es5.a43288b87dd90259b6eb.js" nomodule defer></script></body>
 </html>
