@@ -9,6 +9,8 @@
     <meta name="msvalidate.01" content="9A902F1AA09340A0DAEB4F6BE600256A"/>
     <meta name="google-site-verification" content="RtuL_Xza-waRc0K-FTNIhPlxBf3ysMqYCc78fNZw9Ks"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <meta name="keywords" content="Geekpowr"/>
+    <meta name="description" content="Geekpowr"/>
     <!-- Hotjar Tracking Code for geekpowr.com -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -28,41 +30,6 @@
     <link rel="manifest" href="manifest.webmanifest"/>
     <meta name="theme-color" content="#1976d2"/>
     <link as="style" rel="stylesheet preload prefetch" href="assets/styles/fonts.css" crossorigin="anonymous" type="text/css"/>
-    <!-- Facebook Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "237601241440956");
-      fbq("track", "PageView");
-    </script>
-    <noscript><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=237601241440956&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
   <link rel="stylesheet" href="styles.c64d2fbd381f9bba8be9.css"></head>
   <body>
     <div id="splash-screen">
@@ -199,5 +166,79 @@
     <noscript>
       Please enable JavaScript to continue using this application.
     </noscript>
-  <script src="runtime-es2015.4e0c58e15121a132e27f.js" type="module"></script><script src="runtime-es5.4e0c58e15121a132e27f.js" nomodule defer></script><script src="polyfills-es5.2cd700e1be21a77d21ba.js" nomodule defer></script><script src="polyfills-es2015.403705b2a6be91429646.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.1c6b9bb8966b9a896ad4.js" type="module"></script><script src="main-es5.1c6b9bb8966b9a896ad4.js" nomodule defer></script></body>
+    <!-- Facebook Pixel Code -->
+    <script>
+      let timeoutID;
+      !(function (f, b, e, v, n, t, s) {
+        const _wr = function (type) {
+          const orig = history[type];
+          return function () {
+            const rv = orig.apply(this, arguments);
+            const e = new Event("routeChanged");
+            e.arguments = arguments;
+            window.dispatchEvent(e);
+            return rv;
+          };
+        };
+
+        f.history.pushState = _wr("pushState");
+        f.history.replaceState = _wr("replaceState");
+        f.history.back = _wr("forward");
+        f.history.forward = _wr("forward");
+        f.history.go = _wr("go");
+
+        // Use it like this:
+        f.addEventListener("routeChanged", function (e) {
+          if (timeoutID) {
+            clearTimeout(timeoutID);
+          }
+
+          timeoutID = setTimeout(() => {
+            console.log("track", "PageView ", e);
+
+            f.fbq.disablePushState = true;
+            f.fbq("init", "237601241440956");
+            f.fbq("track", "PageView");
+          }, 500);
+        });
+
+        // f.addEventListener("popstate", (e) => {
+        //   debugger;
+        //   f.fbq("track", "PageView");
+        // });
+
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      // window.fbq("track", "PageView");
+
+      // Add this:
+    </script>
+    <noscript><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=237601241440956&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <script src="runtime-es2015.2d0848c8137ed83a9b29.js" type="module"></script><script src="runtime-es5.2d0848c8137ed83a9b29.js" nomodule defer></script><script src="polyfills-es5.2cd700e1be21a77d21ba.js" nomodule defer></script><script src="polyfills-es2015.403705b2a6be91429646.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.da86992a615ed5cf8915.js" type="module"></script><script src="main-es5.da86992a615ed5cf8915.js" nomodule defer></script></body>
 </html>
