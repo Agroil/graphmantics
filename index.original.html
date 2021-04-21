@@ -30,6 +30,34 @@
     <link rel="manifest" href="manifest.webmanifest"/>
     <meta name="theme-color" content="#1976d2"/>
     <link as="style" rel="stylesheet preload prefetch" href="assets/styles/fonts.css" crossorigin="anonymous" type="text/css"/>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+
+      window.fbq("init", "237601241440956");
+      window.fbq("track", "PageView");
+    </script>
   <link rel="stylesheet" href="styles.c64d2fbd381f9bba8be9.css"></head>
   <body>
     <div id="splash-screen">
@@ -164,7 +192,16 @@
     </div>
     <app-root></app-root>
     <!-- Facebook Pixel Code -->
-    <script>
+    <noscript>
+      Please enable JavaScript to continue using this application.
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=237601241440956&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- <script>
       const timeoutRange = 2000;
       let timeoutID;
       const _wr = function (type) {
@@ -183,59 +220,22 @@
           clearTimeout(timeoutID);
         }
 
-        timeoutID = setTimeout(() => {
-          !(function (f, b, e, v, n, t, s) {
-            f.history.pushState = _wr("pushState");
-            f.history.replaceState = _wr("replaceState");
-            f.history.back = _wr("forward");
-            f.history.forward = _wr("forward");
-            f.history.go = _wr("go");
+        setTimeout(() => {
+          window.history.pushState = _wr("pushState");
+          window.history.replaceState = _wr("replaceState");
+          window.history.back = _wr("forward");
+          window.history.forward = _wr("forward");
+          window.history.go = _wr("go");
 
-            // Use it like this:
-            f.addEventListener("routeChanged", function (e) {
-              setTimeout(() => {
-                console.log("track", "PageView ", e);
-                f.fbq("track", "PageView");
-              }, timeoutRange);
-            });
-
-            if (f.fbq) return;
-            n = f.fbq = function () {
-              n.callMethod
-                ? n.callMethod.apply(n, arguments)
-                : n.queue.push(arguments);
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = "2.0";
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s);
-          })(
-            window,
-            document,
-            "script",
-            "https://connect.facebook.net/en_US/fbevents.js"
-          );
-
-          window.fbq("init", "237601241440956");
-          window.fbq("track", "PageView");
-        }, timeoutRange * 3);
+          // Use it like this:
+          window.addEventListener("routeChanged", function (e) {
+            console.log("track", "PageView ", e);
+            window.fbq("track", "PageView");
+            window.fbq("track", "ContentView");
+          });
+        }, timeoutRange);
       });
-    </script>
-    <noscript>
-      Please enable JavaScript to continue using this application.
-      <img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=237601241440956&ev=PageView&noscript=1"
-      />
-    </noscript>
+    </script> -->
     <!-- End Facebook Pixel Code -->
-  <script src="runtime-es2015.58cb3f09a5c49872f3f0.js" type="module"></script><script src="runtime-es5.58cb3f09a5c49872f3f0.js" nomodule defer></script><script src="polyfills-es5.4ca4d001325fc8053a51.js" nomodule defer></script><script src="polyfills-es2015.467f6169c8691f8ebbb2.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.a43288b87dd90259b6eb.js" type="module"></script><script src="main-es5.a43288b87dd90259b6eb.js" nomodule defer></script></body>
+  <script src="runtime-es2015.58cb3f09a5c49872f3f0.js" type="module"></script><script src="runtime-es5.58cb3f09a5c49872f3f0.js" nomodule defer></script><script src="polyfills-es5.4ca4d001325fc8053a51.js" nomodule defer></script><script src="polyfills-es2015.467f6169c8691f8ebbb2.js" type="module"></script><script src="scripts.6163fff04752b8de690d.js" defer></script><script src="main-es2015.92be09cb28bbb8693834.js" type="module"></script><script src="main-es5.92be09cb28bbb8693834.js" nomodule defer></script></body>
 </html>
